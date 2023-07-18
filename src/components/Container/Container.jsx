@@ -12,18 +12,13 @@ function Container({
   contactsArr,
   onRemoveContact,
 }) {
-  
   return (
     <Section>
       <h1>Phonebook</h1>
 
-      <ContactForm formAddContact={formAddContact}
-       contactsArr={contactsArr}
-       />
-      <h2>Contacts</h2>     
-      <Filter
-       value={value}
-       handleOnChangeFilter={handleOnChangeFilter} />      
+      <ContactForm formAddContact={formAddContact} contactsArr={contactsArr} />
+      <h2>Contacts</h2>
+      <Filter value={value} handleOnChangeFilter={handleOnChangeFilter} />
       <Contacts
         filteredContact={filteredContact}
         onRemoveContact={onRemoveContact}
@@ -36,12 +31,11 @@ function Container({
 
 Container.propTypes = {
   formAddContact: PropTypes.func.isRequired,
-    value: PropTypes.string.isRequired,
-    handleOnChangeFilter: PropTypes.func.isRequired,
-    filteredContact: PropTypes.array.isRequired,
-    contactsArr: PropTypes.array.isRequired,
-    onRemoveContact: PropTypes.func.isRequired
-
+  value: PropTypes.string.isRequired,
+  handleOnChangeFilter: PropTypes.func.isRequired,
+  filteredContact: PropTypes.array.isRequired,
+  contactsArr: PropTypes.array.isRequired,
+  onRemoveContact: PropTypes.func.isRequired,
 };
 
 export default Container;
